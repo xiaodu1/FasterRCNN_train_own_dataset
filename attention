@@ -5,7 +5,8 @@ Just delete it
 rm data/VOCdevkit2007/annotations_cache/annots.pkl and run the program again.
 You should also delete the roidb cache:
 rm data/cache/voc_2007_trainval_gt_roidb.pkl
-
 3、trian own dataset时修改的地方
 pascal_voc self.classes
 4、lib\networks中VGGnet_train.py和VGG_test.py中更改n_classes为自己的类的个数+1
+5、每次重新训练数据集或者训练新添加的数据集时删除 data/cache 里面的voc_2007_trainval_gt_roidb.pkl
+6、每次往数据集里面添加新数据时要重新生成data/VOCdevkit2007VOC2007/imageSets里面的四个txt
